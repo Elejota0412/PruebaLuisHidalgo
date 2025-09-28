@@ -1,59 +1,57 @@
-# PruebaLuis
+# El Dorado Landing Page - Prueba Técnica Luis Hidalgo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
-
-## Development server
-
-To start a local development server, run:
+Se desarrolló una landing page moderna para **El Dorado P2P**, inspirada en la actual para realizar la prueba técnica solicitada. Para ejecutar el proyecto se pueden seguir lo siguientes pasos:
 
 ```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Elejota0412/PruebaLuisHidalgo.git
+
+# 2. Entrar al directorio
+cd PruebaLuisHidalgo
+
+# 3. Instalar dependencias
+npm install
+
+# 4. Ejecutar en modo desarrollo
 ng serve
 ```
 
+La aplicación estará disponible en: http://localhost:4200
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## ESTRUCTURA PRINCIPAL DE LA APLICACIÓN
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+src/app/components/
+├── navbar/           # Navegación responsiva y funcional
+├── hero-section/     # Sección principal
+├── payment-methods/  # +70 métodos de pago
+├── benefits/         # Video y beneficios
+├── download-cta/     # Descarga de app
+└── footer/           # Información legal
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Requisitos del Sistema
 
 ```bash
-ng build
+Node.js: 18.x o superior
+
+npm: 9.x o superior
+
+Angular CLI: 17.x
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para una mejor experiencia al trabajar con el repositorio, se recomienda verificar la instalación correcta de los requisitos, se puede hacer de la siguiente manera:
 
 ```bash
-ng test
+node --version
+npm --version
+ng version
 ```
 
-## Running end-to-end tests
+## Configuración
+El proyecto incluye:
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✅ Bootstrap 5 para estilos responsive
+✅ Integración con API de criptomonedas
+✅ Componentes modulares y reutilizables
+✅ Optimizado para SEO y performance
