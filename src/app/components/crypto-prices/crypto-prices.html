@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <h1>Comportamiento Criptomonedas - 24h</h1>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-4">
+    <div *ngIf="loading" class="col-12 crypto-loading text-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+      <p class="mt-2">Cargando datos de criptomonedas...</p>
+    </div>
+
+    <div *ngIf="error && !loading" class="col-12 text-center text-danger">
+      <p>{{ error }}</p>
+      <small>Intenta recargar la página</small>
+      <button class="btn btn-primary mt-2" (click)="loadCryptoData()">Reintentar</button>
+    </div>
+
+    <div *ngIf="!loading && !error" class="col-12">
+      <div class="row">
+        <div *ngFor="let coin of cryptocurrencies" class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="crypto-card">
+            <div class="row align-items-center">
+              <div class="col-3">
+                <img [src]="coin.image" [alt]="coin.name" width="40" height="40" class="img-fluid">
+              </div>
+              <div class="col-9">
+                <div class="row">
+                  <div class="col-12">
+                    <strong>{{ coin.symbol.toUpperCase() }}</strong>
+                    <small class="float-end">{{ coin.current_price | number:'1.2-2' }}$</small>
+                  </div>
+                  <div class="col-12">
+                    <small>{{ coin.name }}</small>
+                    <span class="float-end" [ngClass]="getChangeClass(coin.price_change_percentage_24h)">
+                      {{ getChangeIcon(coin.price_change_percentage_24h) }} 
+                      {{ coin.price_change_percentage_24h | number:'1.2-2' }}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

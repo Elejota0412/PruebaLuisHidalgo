@@ -1,0 +1,128 @@
+<section class="benefits-section">
+    <div class="container-fluid container-benefits">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h2>Beneficios de El Dorado P2P</h2>
+                <p class="section-subtitle">Descubre por qué somos la plataforma preferida para trading de stablecoins en Latinoamérica</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-4 benefits-column">
+                <div class="benefit-item" [class.active]="activeBenefit === 1" (mouseenter)="setActiveBenefit(1)">
+                    <div class="benefit-icon"><i class="bi bi-clock-history"></i></div>
+                    <div class="benefit-content">
+                        <h4>Transacciones en Tiempo Real</h4>
+                        <p>Operaciones completadas en minutos. Sin esperas, sin intermediarios.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" [class.active]="activeBenefit === 2" (mouseenter)="setActiveBenefit(2)">
+                    <div class="benefit-icon"><i class="bi bi-shield-fill-check"></i></div>
+                    <div class="benefit-content">
+                        <h4>Seguridad Bancaria</h4>
+                        <p>Encriptación avanzada y sistema de custodia para máxima protección.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" [class.active]="activeBenefit === 3" (mouseenter)="setActiveBenefit(3)">
+                    <div class="benefit-icon"><i class="bi bi-credit-card-2-back-fill"></i></div>
+                    <div class="benefit-content">
+                        <h4>+70 Métodos de Pago</h4>
+                        <p>Desde Nequi y Pix hasta PayPal y transferencias bancarias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 video-column">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video 
+                            #videoPlayer
+                            width="100%" 
+                            height="315"
+                            poster="media/video.png"
+                            (click)="toggleVideo()"
+                            class="benefits-video">
+                            <source src="media/ElDorado.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        
+                        <div class="video-controls" *ngIf="!isPlaying">
+                            <button class="play-btn" (click)="playVideo()">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </button>
+                            <div class="video-overlay">
+                                <p>Haz clic para ver la demostración</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-stats">
+                        <div class="stat">
+                            <h4>4.8★</h4>
+                            <p>Califación Promedio</p>
+                        </div>
+                        <div class="stat">
+                            <h4>1M+</h4>
+                            <p>Usuarios</p>
+                        </div>
+                        <div class="stat">
+                            <h4>10K+</h4>
+                            <p>Transacciones Diarias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 benefits-column">
+                <div class="benefit-item" [class.active]="activeBenefit === 4" (mouseenter)="setActiveBenefit(4)">
+                    <div class="benefit-icon"><i class="bi bi-globe-americas-fill"></i></div>
+                    <div class="benefit-content">
+                        <h4>Hecho para LATAM</h4>
+                        <p>Diseñada específicamente para las necesidades de usuarios latinoamericanos.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" [class.active]="activeBenefit === 5" (mouseenter)="setActiveBenefit(5)">
+                    <div class="benefit-icon"><i class="bi bi-phone-flip"></i></div>
+                    <div class="benefit-content">
+                        <h4>Interfaz Intuitiva</h4>
+                        <p>Fácil de usar para principiantes, potente para traders expertos.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" [class.active]="activeBenefit === 6" (mouseenter)="setActiveBenefit(6)">
+                    <div class="benefit-icon"><i class="bi bi-coin"></i></div>
+                    <div class="benefit-content">
+                        <h4>Compra y Vende</h4>
+                        <p>Plataforma completa para ambas operaciones con liquidez garantizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row features-grid">
+            <div class="col-12 col-md-6 col-lg-3 feature-item">
+                <div class="feature-icon"><i class="bi bi-cash-coin"></i></div>
+                <h5>Cambia dólares en confianza</h5>
+                <p align="justify">El sistema de reputación de El Dorado facilita verificar que estás tratando con comerciantes de confianza, haciendo nuestro mercado P2P el más transparente.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 feature-item">
+                <div class="feature-icon">0%</div>
+                <h5>Manda USDT sin comisiones</h5>
+                <p align="justify">Envía USDT sin comisiones a otros usuarios por El Dorado Pay, o deposita y retira por Arbitrum y Tron entre billeteras.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 feature-item">
+                <div class="feature-icon"><i class="bi bi-currency-exchange"></i></div>
+                <h5>El Dorado P2P</h5>
+                <p align="justify">Con El Dorado P2P puedes cambiar USDT de forma sencilla usando una variedad de apps de finanzas como Pix, Zinli, Wally, Zelle, PayPal, Nequi, Bancolombia, MercadoPago y más.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 feature-item">
+                <div class="feature-icon"><i class="bi bi-currency-exchange"></i></div>
+                <h5>El Dorado P2P</h5>
+                <p align="justify">Genera ganancias diarias depositando dólares digitales en tu caja fuerte de El Dorado Gana.</p>
+            </div>
+        </div>
+    </div>
+</section>

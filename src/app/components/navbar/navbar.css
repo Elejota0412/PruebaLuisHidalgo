@@ -1,0 +1,219 @@
+.navbar {
+    z-index: 1000;
+    background: #fffae0;
+    border-bottom: 2px solid black;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: #b98200;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 180, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #ffb400;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 180, 0, 0.3);
+}
+
+.navbar-nav .nav-link.active:hover {
+    background-color: #e6a200;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.register-btn {
+    background-color: #047381;
+    color: white;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+}
+
+.register-btn:hover {
+    background-color: #035c68;
+    color: white;
+}
+
+.login-btn {
+    border: 2px solid #ffb400;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+}
+
+.login-btn:hover {
+    background-color: #ffb400;
+    color: white;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fcefb7;
+        z-index: 1000;
+        padding: 1rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-top: 2px solid #ffb400;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-item {
+        margin: 0.3rem 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        padding: 1rem;
+        margin: 0.2rem 0;
+        text-align: center;
+        display: block;
+        border-radius: 8px;
+    }
+    
+    .navbar-nav.mx-auto {
+        margin: 0;
+    }
+    
+    .navbar-nav.mb-2 {
+        margin-bottom: 0;
+        margin-top: 1rem;
+        border-top: 1px solid rgba(255, 180, 0, 0.3);
+        padding-top: 1rem;
+    }
+
+    .register-btn, .login-btn {
+        margin: 0.5rem 0;
+        text-align: center;
+        display: block;
+    }
+}
+
+.navbar-toggler {
+    border: 2px solid #ffb400;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 180, 0, 0.25);
+}
+
+.navbar-toggler[aria-expanded="true"] {
+    background-color: #ffb400;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 180, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: background-image 0.3s ease;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-thumb {
+        background: #ffb400;
+        border-radius: 10px;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-thumb:hover {
+        background: #e6a200;
+    }
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: #ffb400;
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: 60px;
+}
+
+/* Para los botones especiales */
+.register-btn.active::after,
+.login-btn.active::after {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}

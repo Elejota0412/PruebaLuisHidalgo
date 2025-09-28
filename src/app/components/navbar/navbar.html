@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" (click)="scrollToSection('inicio')" style="cursor: pointer;">
+            <img src="media/logoUno.png" width="150" alt="El Dorado P2P">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            (click)="toggleNavbar()"
+            [attr.aria-expanded]="!isNavbarCollapsed"
+            aria-controls="navbarSupportedContent"
+            aria-label="Toggle navigation"
+            [class.collapsed]="isNavbarCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" 
+             [class.show]="!isNavbarCollapsed"
+             id="navbarSupportedContent">
+            
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       [class.active]="activeLink === 'inicio'"
+                       (click)="scrollToSection('inicio')"
+                       style="cursor: pointer;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       [class.active]="activeLink === 'pago'"
+                       (click)="scrollToSection('pago')"
+                       style="cursor: pointer;">Métodos de Pago</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       [class.active]="activeLink === 'cripto'"
+                       (click)="scrollToSection('cripto')"
+                       style="cursor: pointer;">CriptoMercado</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       [class.active]="activeLink === 'descargar'"
+                       (click)="scrollToSection('descargar')"
+                       style="cursor: pointer;">Descargar App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                       [class.active]="activeLink === 'beneficios'"
+                       (click)="scrollToSection('beneficios')"
+                       style="cursor: pointer;">Beneficios</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link register-btn" 
+                       [class.active]="activeLink === 'registro'"
+                       (click)="scrollToSection('descargar')"
+                       style="cursor: pointer;">REGÍSTRATE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link login-btn" 
+                       [class.active]="activeLink === 'login'"
+                       (click)="scrollToSection('descargar')"
+                       style="cursor: pointer;">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

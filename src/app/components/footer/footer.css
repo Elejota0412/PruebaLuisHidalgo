@@ -1,0 +1,209 @@
+.footer-section {
+    background: #fffae0;
+    border-top: 2px solid black;
+    color: black;
+    padding: 2rem 0 1rem 0;
+    margin-top: 3rem;
+}
+
+.first-row {
+    margin-bottom: 1.5rem;
+}
+
+.logo-column {
+    padding: 1rem;
+}
+
+.company-name {
+    font-weight: bold;
+    color: #002e63;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.company-registry {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.content-column {
+    padding: 1rem;
+}
+
+.social-section {
+    margin-bottom: 1.5rem;
+}
+
+.social-section h5 {
+    color: #002e63;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background: rgba(6, 105, 187, 0.5);
+    border-radius: 5px;
+    color: #002e63;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.social-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.social-btn span {
+    font-size: 0.9rem;
+}
+
+.social-btn.twitter:hover { 
+    color: white;
+    background: #000000; 
+}
+.social-btn.telegram:hover { 
+    color: white;
+    background: #0088cc; 
+}
+.social-btn.instagram:hover { 
+    color: white;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); 
+}
+.social-btn.linkedin:hover { 
+    color: white;
+    background: #0066c8; 
+}
+
+
+.legal-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.legal-section h6 {
+    color: #002e63;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.legal-section p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    text-align: justify;
+}
+
+.contact-info {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.contact-info strong {
+    color: #002e63;
+}
+
+.contact-info a {
+    color: #002e63;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.second-row {
+    border-top: 1px solid black;
+    padding-top: 1rem;
+}
+
+.copyright-section {
+    text-align: center;
+}
+
+.copyright-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: #002e63;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 1.5rem 0 1rem 0;
+    }
+    
+    .logo-column,
+    .content-column {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .social-buttons {
+        gap: 0.5rem;
+    }
+    
+    .social-btn {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .social-btn span {
+        font-size: 0.8rem;
+    }
+    
+    .legal-section p {
+        text-align: left;
+        font-size: 0.75rem;
+    }
+    
+    .legal-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        width: 200px;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,51 @@
+.contds {
+    height: 650px;
+}
+
+.rowl {
+    justify-content: center;
+    height: 100%;
+}
+
+.cols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-page {
+    background: url('../../../assets/media/home3.png') no-repeat center center;
+    background-size: 1150px;
+}
+
+.textInfo {
+    margin-top: 300px;
+    background-color: rgba(253, 244, 202, 0.8) !important;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    .contds {
+        height: 500px;
+    }
+    
+    .hero-page {
+        background-size: 800px;
+    }
+    
+    .textInfo {
+        margin-top: 200px;
+    }
+    
+    .textInfo h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .textInfo h4 {
+        font-size: 1rem !important;
+    }
+}

@@ -1,0 +1,31 @@
+.crypto-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.crypto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.crypto-positive {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.crypto-negative {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.crypto-loading {
+  padding: 40px 0;
+}
+
+h1 {
+  font-weight: 900;
+}
